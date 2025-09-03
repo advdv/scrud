@@ -1,7 +1,7 @@
 version: v2
 modules:
   - path: .
-    name: buf.build/advdv/scrud
+    name: buf.build/avdv/scrud
 lint:
   use:
     - PACKAGE_NO_IMPORT_CYCLE
