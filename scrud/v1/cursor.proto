@@ -4,6 +4,8 @@ package scrud.v1;
 import "google/protobuf/duration.proto";
 import "google/protobuf/timestamp.proto";
 
+option go_package = "github.com/advdv/scrud/scrud/v1";
+
 // Describes a pagination cursor
 message Cursor {
   string primary_id = 1;

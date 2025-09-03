@@ -3,6 +3,8 @@ package scrud.v1;
 
 import "scrud/v1/options.proto";
 
+option go_package = "github.com/advdv/scrud/scrud/v1";
+
 // Describes a method on a entity. It mirrors a protobuf rpc method.
 message Action {
   string proto_name = 1;

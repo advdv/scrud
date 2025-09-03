@@ -3,6 +3,8 @@ package scrud.v1;
 
 import "google/protobuf/descriptor.proto";
 
+option go_package = "github.com/advdv/scrud/scrud/v1";
+
 enum ActionKind {
   ACTION_KIND_UNSPECIFIED = 0;
   ACTION_KIND_DESCRIBE = 1;
