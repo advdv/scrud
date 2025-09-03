@@ -1,0 +1,112 @@
+version: "2"
+linters:
+  default: all
+  disable:
+    - canonicalheader
+    - containedctx
+    - dogsled
+    - dupl
+    - dupword
+    - err113
+    - exhaustruct
+    - funlen
+    - gochecknoglobals
+    - gochecknoinits
+    - goconst
+    - gomoddirectives
+    - ireturn
+    - maintidx
+    - mnd
+    - nlreturn
+    - nonamedreturns
+    - perfsprint
+    - tagliatelle
+    - thelper
+    - unparam
+    - wrapcheck
+    - wsl_v5
+    - wsl
+    - noinlineerr
+  settings:
+    cyclop:
+      max-complexity: 30
+    depguard:
+      rules:
+        no-samber-lo:
+          list-mode: lax
+          files:
+            - $all
+          deny:
+            - pkg: github.com/samber/lo
+              desc: force our own utility package
+    revive:
+      rules:
+        - name: package-comments
+          disabled: true
+    funlen:
+      lines: 200
+    nlreturn:
+      block-size: 3
+    staticcheck:
+      checks:
+        - all
+        - "-ST1000"
+    varnamelen:
+      max-distance: 15
+      ignore-names:
+        - id
+        - err
+        - db
+        - tx
+        - w
+        - r
+        - ok
+        - rw
+        - ro
+        - sy
+        - op
+        - lc
+  exclusions:
+    generated: lax
+    presets:
+      - common-false-positives
+      - legacy
+      - std-error-handling
+    rules:
+      - linters:
+          - dupl
+          - err113
+          - errcheck
+          - forcetypeassert
+          - gochecknoglobals
+          - gocyclo
+          - gosec
+          - lll
+          - nilnil
+          - nlreturn
+          - perfsprint
+          - revive
+          - varnamelen
+          - wrapcheck
+        path: _test\.go
+      - path: (.+)\.go$
+        text: ST1003
+    paths:
+      - infra/builds
+      - node_modules
+      - third_party$
+      - builtin$
+      - examples$
+formatters:
+  enable:
+    - gofmt
+    - gofumpt
+    - goimports
+  exclusions:
+    generated: lax
+    paths:
+      - infra/builds
+      - node_modules
+      - third_party$
+      - builtin$
+      - examples$

@@ -1,0 +1,6 @@
+github.com/advdv/stdgo v0.0.151 h1:omznnE0CE82ZLOWg6IaFPgUS0anwCMOc3aL/pAoEvpA=
+github.com/advdv/stdgo v0.0.151/go.mod h1:JR5H1zkcoBNgfKVCFPLSwJC0/N5s5M+ZY0Wf4V2iuLg=
+github.com/joho/godotenv v1.5.1 h1:7eLL/+HRGLY0ldzfGMeQkb7vMd0as4CfYvUVzLqw0N0=
+github.com/joho/godotenv v1.5.1/go.mod h1:f4LDr5Voq0i2e/R5DDNOoa2zzDfwtkZa6DnEwAbqwq4=
+github.com/magefile/mage v1.15.0 h1:BvGheCMAsG3bWUDbZ8AyXXpCNwU9u5CB6sM+HNb9HYg=
+github.com/magefile/mage v1.15.0/go.mod h1:z5UZb/iS3GoOSn0JgWuiw7dxlurVYTu+/jHXqQg881A=
