@@ -1,0 +1,54 @@
+syntax = "proto2";
+package v1;
+
+import "google/protobuf/descriptor.proto";
+
+enum ActionKind {
+  ACTION_KIND_UNSPECIFIED = 0;
+  ACTION_KIND_DESCRIBE = 1;
+  ACTION_KIND_LIST = 2;
+  ACTION_KIND_MODIFY = 3;
+  ACTION_KIND_REMOVE = 4;
+  ACTION_KIND_CREATE = 5;
+  ACTION_KIND_RESTORE = 6;
+  ACTION_KIND_CUSTOM = 999;
+}
+
+enum InputKind {
+  INPUT_KIND_UNSPECIFIED = 0;
+  INPUT_KIND_IDS = 1;
+  INPUT_KIND_ITEMS = 2;
+  INPUT_KIND_NO_ID_ITEMS = 3;
+}
+
+enum OutputKind {
+  OUTPUT_KIND_UNSPECIFIED = 0;
+  OUTPUT_KIND_IDS = 1;
+  OUTPUT_KIND_ITEMS = 2;
+  OUTPUT_KIND_EMPTY = 3;
+}
+
+message MethodOptions {
+  optional string entity = 1;
+  optional ActionKind action = 2;
+  optional InputKind input = 3;
+  optional OutputKind output = 4;
+}
+
+extend google.protobuf.MethodOptions {
+  optional MethodOptions method = 1098;
+}
+
+enum ServiceSide {
+  SERVICE_SIDE_UNSPECIFIED = 0;
+  SERVICE_SIDE_READ_WRITE = 1;
+  SERVICE_SIDE_READ_ONLY = 2;
+}
+
+message ServiceOptions {
+  optional ServiceSide side = 1;
+}
+
+extend google.protobuf.ServiceOptions {
+  optional ServiceOptions service = 1099;
+}

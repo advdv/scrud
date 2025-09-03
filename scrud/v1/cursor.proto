@@ -1,0 +1,41 @@
+edition = "2023";
+package v1;
+
+import "google/protobuf/duration.proto";
+import "google/protobuf/timestamp.proto";
+
+// Describes a pagination cursor
+message Cursor {
+  string primary_id = 1;
+  bool is_backwards = 2;
+  oneof order_value {
+    // ─── strings & bytes ─────────────────────────────
+    string order_string = 3;
+    bytes order_bytes = 4;
+
+    // ─── signed integers ────────────────────────────
+    int32 order_int32 = 5;
+    int64 order_int64 = 6;
+    sint32 order_sint32 = 7;
+    sint64 order_sint64 = 8;
+    sfixed32 order_sfixed32 = 9;
+    sfixed64 order_sfixed64 = 10;
+
+    // ─── unsigned integers ──────────────────────────
+    uint32 order_uint32 = 11;
+    uint64 order_uint64 = 12;
+    fixed32 order_fixed32 = 13;
+    fixed64 order_fixed64 = 14;
+
+    // ─── floating‑point ─────────────────────────────
+    float order_float = 15;
+    double order_double = 16;
+
+    // ─── logical values ─────────────────────────────
+    bool order_bool = 17;
+
+    // ─── well‑known types ───────────────────────────
+    google.protobuf.Timestamp order_timestamp = 18;
+    google.protobuf.Duration order_duration = 19;
+  }
+}

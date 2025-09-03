@@ -1,0 +1,15 @@
+version: v2
+modules:
+  - path: .
+    name: buf.build/advdv/scrud
+lint:
+  use:
+    - PACKAGE_NO_IMPORT_CYCLE
+    - STANDARD
+    - SCRUD
+breaking:
+  use:
+    - FILE
+  except:
+    - EXTENSION_NO_DELETE
+    - FIELD_SAME_DEFAULT

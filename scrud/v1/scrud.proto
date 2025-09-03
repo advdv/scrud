@@ -1,0 +1,22 @@
+edition = "2023";
+package v1;
+
+import "scrud/v1/options.proto";
+
+// Describes a method on a entity. It mirrors a protobuf rpc method.
+message Action {
+  string proto_name = 1;
+  v1.ActionKind kind = 3;
+}
+
+// Entity describes a thing we store in our database. It has not protobuf equivalent and is configured in the
+// configuration file.
+message Entity {
+  string name = 1;
+  map<string, Action> actions = 4;
+}
+
+// App is the root description used for code generation.
+message App {
+  map<string, Entity> entities = 2;
+}
