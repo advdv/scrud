@@ -1,4 +1,4 @@
-package v1
+package scrudv1
 
 import (
 	"fmt"

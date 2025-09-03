@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: scrud/v1/cursor.proto
 
-package v1
+package scrudv1
 
 import (
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
@@ -878,7 +878,7 @@ var File_scrud_v1_cursor_proto protoreflect.FileDescriptor
 
 const file_scrud_v1_cursor_proto_rawDesc = "" +
 	"\n" +
-	"\x15scrud/v1/cursor.proto\x12\x02v1\x1a\x1egoogle/protobuf/duration.proto\x1a\x1fgoogle/protobuf/timestamp.proto\"\x8f\x06\n" +
+	"\x15scrud/v1/cursor.proto\x12\bscrud.v1\x1a\x1egoogle/protobuf/duration.proto\x1a\x1fgoogle/protobuf/timestamp.proto\"\x8f\x06\n" +
 	"\x06Cursor\x12\x1d\n" +
 	"\n" +
 	"primary_id\x18\x01 \x01(\tR\tprimaryId\x12!\n" +
@@ -906,18 +906,18 @@ const file_scrud_v1_cursor_proto_rawDesc = "" +
 	"order_bool\x18\x11 \x01(\bH\x00R\torderBool\x12E\n" +
 	"\x0forder_timestamp\x18\x12 \x01(\v2\x1a.google.protobuf.TimestampH\x00R\x0eorderTimestamp\x12B\n" +
 	"\x0eorder_duration\x18\x13 \x01(\v2\x19.google.protobuf.DurationH\x00R\rorderDurationB\r\n" +
-	"\vorder_valueB^\n" +
-	"\x06com.v1B\vCursorProtoP\x01Z\x1fgithub.com/advdv/scrud/scrud/v1\xa2\x02\x03VXX\xaa\x02\x02V1\xca\x02\x02V1\xe2\x02\x0eV1\\GPBMetadata\xea\x02\x02V1b\beditionsp\xe8\a"
+	"\vorder_valueB\x85\x01\n" +
+	"\fcom.scrud.v1B\vCursorProtoP\x01Z'github.com/advdv/scrud/scrud/v1;scrudv1\xa2\x02\x03SXX\xaa\x02\bScrud.V1\xca\x02\bScrud\\V1\xe2\x02\x14Scrud\\V1\\GPBMetadata\xea\x02\tScrud::V1b\beditionsp\xe8\a"
 
 var file_scrud_v1_cursor_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_scrud_v1_cursor_proto_goTypes = []any{
-	(*Cursor)(nil),                // 0: v1.Cursor
+	(*Cursor)(nil),                // 0: scrud.v1.Cursor
 	(*timestamppb.Timestamp)(nil), // 1: google.protobuf.Timestamp
 	(*durationpb.Duration)(nil),   // 2: google.protobuf.Duration
 }
 var file_scrud_v1_cursor_proto_depIdxs = []int32{
-	1, // 0: v1.Cursor.order_timestamp:type_name -> google.protobuf.Timestamp
-	2, // 1: v1.Cursor.order_duration:type_name -> google.protobuf.Duration
+	1, // 0: scrud.v1.Cursor.order_timestamp:type_name -> google.protobuf.Timestamp
+	2, // 1: scrud.v1.Cursor.order_duration:type_name -> google.protobuf.Duration
 	2, // [2:2] is the sub-list for method output_type
 	2, // [2:2] is the sub-list for method input_type
 	2, // [2:2] is the sub-list for extension type_name

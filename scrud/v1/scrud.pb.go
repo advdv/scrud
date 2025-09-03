@@ -4,12 +4,11 @@
 // 	protoc        (unknown)
 // source: scrud/v1/scrud.proto
 
-package v1
+package scrudv1
 
 import (
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
-	_ "google.golang.org/protobuf/types/descriptorpb"
 	reflect "reflect"
 	unsafe "unsafe"
 )
@@ -25,7 +24,7 @@ const (
 type Action struct {
 	state                  protoimpl.MessageState `protogen:"opaque.v1"`
 	xxx_hidden_ProtoName   *string                `protobuf:"bytes,1,opt,name=proto_name,json=protoName"`
-	xxx_hidden_Kind        ActionKind             `protobuf:"varint,3,opt,name=kind,enum=v1.ActionKind"`
+	xxx_hidden_Kind        ActionKind             `protobuf:"varint,3,opt,name=kind,enum=scrud.v1.ActionKind"`
 	XXX_raceDetectHookData protoimpl.RaceDetectHookData
 	XXX_presence           [1]uint32
 	unknownFields          protoimpl.UnknownFields
@@ -288,42 +287,40 @@ var File_scrud_v1_scrud_proto protoreflect.FileDescriptor
 
 const file_scrud_v1_scrud_proto_rawDesc = "" +
 	"\n" +
-	"\x14scrud/v1/scrud.proto\x12\x02v1\x1a google/protobuf/descriptor.proto\x1a\x16scrud/v1/options.proto\"K\n" +
+	"\x14scrud/v1/scrud.proto\x12\bscrud.v1\x1a\x16scrud/v1/options.proto\"Q\n" +
 	"\x06Action\x12\x1d\n" +
 	"\n" +
-	"proto_name\x18\x01 \x01(\tR\tprotoName\x12\"\n" +
-	"\x04kind\x18\x03 \x01(\x0e2\x0e.v1.ActionKindR\x04kind\"\x97\x01\n" +
+	"proto_name\x18\x01 \x01(\tR\tprotoName\x12(\n" +
+	"\x04kind\x18\x03 \x01(\x0e2\x14.scrud.v1.ActionKindR\x04kind\"\xa3\x01\n" +
 	"\x06Entity\x12\x12\n" +
-	"\x04name\x18\x01 \x01(\tR\x04name\x121\n" +
-	"\aactions\x18\x04 \x03(\v2\x17.v1.Entity.ActionsEntryR\aactions\x1aF\n" +
+	"\x04name\x18\x01 \x01(\tR\x04name\x127\n" +
+	"\aactions\x18\x04 \x03(\v2\x1d.scrud.v1.Entity.ActionsEntryR\aactions\x1aL\n" +
 	"\fActionsEntry\x12\x10\n" +
-	"\x03key\x18\x01 \x01(\tR\x03key\x12 \n" +
-	"\x05value\x18\x02 \x01(\v2\n" +
-	".v1.ActionR\x05value:\x028\x01\"\x81\x01\n" +
-	"\x03App\x121\n" +
-	"\bentities\x18\x02 \x03(\v2\x15.v1.App.EntitiesEntryR\bentities\x1aG\n" +
+	"\x03key\x18\x01 \x01(\tR\x03key\x12&\n" +
+	"\x05value\x18\x02 \x01(\v2\x10.scrud.v1.ActionR\x05value:\x028\x01\"\x8d\x01\n" +
+	"\x03App\x127\n" +
+	"\bentities\x18\x02 \x03(\v2\x1b.scrud.v1.App.EntitiesEntryR\bentities\x1aM\n" +
 	"\rEntitiesEntry\x12\x10\n" +
-	"\x03key\x18\x01 \x01(\tR\x03key\x12 \n" +
-	"\x05value\x18\x02 \x01(\v2\n" +
-	".v1.EntityR\x05value:\x028\x01B]\n" +
-	"\x06com.v1B\n" +
-	"ScrudProtoP\x01Z\x1fgithub.com/advdv/scrud/scrud/v1\xa2\x02\x03VXX\xaa\x02\x02V1\xca\x02\x02V1\xe2\x02\x0eV1\\GPBMetadata\xea\x02\x02V1b\beditionsp\xe8\a"
+	"\x03key\x18\x01 \x01(\tR\x03key\x12&\n" +
+	"\x05value\x18\x02 \x01(\v2\x10.scrud.v1.EntityR\x05value:\x028\x01B\x84\x01\n" +
+	"\fcom.scrud.v1B\n" +
+	"ScrudProtoP\x01Z'github.com/advdv/scrud/scrud/v1;scrudv1\xa2\x02\x03SXX\xaa\x02\bScrud.V1\xca\x02\bScrud\\V1\xe2\x02\x14Scrud\\V1\\GPBMetadata\xea\x02\tScrud::V1b\beditionsp\xe8\a"
 
 var file_scrud_v1_scrud_proto_msgTypes = make([]protoimpl.MessageInfo, 5)
 var file_scrud_v1_scrud_proto_goTypes = []any{
-	(*Action)(nil),  // 0: v1.Action
-	(*Entity)(nil),  // 1: v1.Entity
-	(*App)(nil),     // 2: v1.App
-	nil,             // 3: v1.Entity.ActionsEntry
-	nil,             // 4: v1.App.EntitiesEntry
-	(ActionKind)(0), // 5: v1.ActionKind
+	(*Action)(nil),  // 0: scrud.v1.Action
+	(*Entity)(nil),  // 1: scrud.v1.Entity
+	(*App)(nil),     // 2: scrud.v1.App
+	nil,             // 3: scrud.v1.Entity.ActionsEntry
+	nil,             // 4: scrud.v1.App.EntitiesEntry
+	(ActionKind)(0), // 5: scrud.v1.ActionKind
 }
 var file_scrud_v1_scrud_proto_depIdxs = []int32{
-	5, // 0: v1.Action.kind:type_name -> v1.ActionKind
-	3, // 1: v1.Entity.actions:type_name -> v1.Entity.ActionsEntry
-	4, // 2: v1.App.entities:type_name -> v1.App.EntitiesEntry
-	0, // 3: v1.Entity.ActionsEntry.value:type_name -> v1.Action
-	1, // 4: v1.App.EntitiesEntry.value:type_name -> v1.Entity
+	5, // 0: scrud.v1.Action.kind:type_name -> scrud.v1.ActionKind
+	3, // 1: scrud.v1.Entity.actions:type_name -> scrud.v1.Entity.ActionsEntry
+	4, // 2: scrud.v1.App.entities:type_name -> scrud.v1.App.EntitiesEntry
+	0, // 3: scrud.v1.Entity.ActionsEntry.value:type_name -> scrud.v1.Action
+	1, // 4: scrud.v1.App.EntitiesEntry.value:type_name -> scrud.v1.Entity
 	5, // [5:5] is the sub-list for method output_type
 	5, // [5:5] is the sub-list for method input_type
 	5, // [5:5] is the sub-list for extension type_name

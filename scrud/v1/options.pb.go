@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: scrud/v1/options.proto
 
-package v1
+package scrudv1
 
 import (
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
@@ -221,9 +221,9 @@ func (x ServiceSide) Number() protoreflect.EnumNumber {
 type MethodOptions struct {
 	state                  protoimpl.MessageState `protogen:"opaque.v1"`
 	xxx_hidden_Entity      *string                `protobuf:"bytes,1,opt,name=entity"`
-	xxx_hidden_Action      ActionKind             `protobuf:"varint,2,opt,name=action,enum=v1.ActionKind"`
-	xxx_hidden_Input       InputKind              `protobuf:"varint,3,opt,name=input,enum=v1.InputKind"`
-	xxx_hidden_Output      OutputKind             `protobuf:"varint,4,opt,name=output,enum=v1.OutputKind"`
+	xxx_hidden_Action      ActionKind             `protobuf:"varint,2,opt,name=action,enum=scrud.v1.ActionKind"`
+	xxx_hidden_Input       InputKind              `protobuf:"varint,3,opt,name=input,enum=scrud.v1.InputKind"`
+	xxx_hidden_Output      OutputKind             `protobuf:"varint,4,opt,name=output,enum=scrud.v1.OutputKind"`
 	XXX_raceDetectHookData protoimpl.RaceDetectHookData
 	XXX_presence           [1]uint32
 	unknownFields          protoimpl.UnknownFields
@@ -394,7 +394,7 @@ func (b0 MethodOptions_builder) Build() *MethodOptions {
 
 type ServiceOptions struct {
 	state                  protoimpl.MessageState `protogen:"opaque.v1"`
-	xxx_hidden_Side        ServiceSide            `protobuf:"varint,1,opt,name=side,enum=v1.ServiceSide"`
+	xxx_hidden_Side        ServiceSide            `protobuf:"varint,1,opt,name=side,enum=scrud.v1.ServiceSide"`
 	XXX_raceDetectHookData protoimpl.RaceDetectHookData
 	XXX_presence           [1]uint32
 	unknownFields          protoimpl.UnknownFields
@@ -474,7 +474,7 @@ var file_scrud_v1_options_proto_extTypes = []protoimpl.ExtensionInfo{
 		ExtendedType:  (*descriptorpb.MethodOptions)(nil),
 		ExtensionType: (*MethodOptions)(nil),
 		Field:         1098,
-		Name:          "v1.method",
+		Name:          "scrud.v1.method",
 		Tag:           "bytes,1098,opt,name=method",
 		Filename:      "scrud/v1/options.proto",
 	},
@@ -482,7 +482,7 @@ var file_scrud_v1_options_proto_extTypes = []protoimpl.ExtensionInfo{
 		ExtendedType:  (*descriptorpb.ServiceOptions)(nil),
 		ExtensionType: (*ServiceOptions)(nil),
 		Field:         1099,
-		Name:          "v1.service",
+		Name:          "scrud.v1.service",
 		Tag:           "bytes,1099,opt,name=service",
 		Filename:      "scrud/v1/options.proto",
 	},
@@ -490,13 +490,13 @@ var file_scrud_v1_options_proto_extTypes = []protoimpl.ExtensionInfo{
 
 // Extension fields to descriptorpb.MethodOptions.
 var (
-	// optional v1.MethodOptions method = 1098;
+	// optional scrud.v1.MethodOptions method = 1098;
 	E_Method = &file_scrud_v1_options_proto_extTypes[0]
 )
 
 // Extension fields to descriptorpb.ServiceOptions.
 var (
-	// optional v1.ServiceOptions service = 1099;
+	// optional scrud.v1.ServiceOptions service = 1099;
 	E_Service = &file_scrud_v1_options_proto_extTypes[1]
 )
 
@@ -504,14 +504,14 @@ var File_scrud_v1_options_proto protoreflect.FileDescriptor
 
 const file_scrud_v1_options_proto_rawDesc = "" +
 	"\n" +
-	"\x16scrud/v1/options.proto\x12\x02v1\x1a google/protobuf/descriptor.proto\"\x9c\x01\n" +
+	"\x16scrud/v1/options.proto\x12\bscrud.v1\x1a google/protobuf/descriptor.proto\"\xae\x01\n" +
 	"\rMethodOptions\x12\x16\n" +
-	"\x06entity\x18\x01 \x01(\tR\x06entity\x12&\n" +
-	"\x06action\x18\x02 \x01(\x0e2\x0e.v1.ActionKindR\x06action\x12#\n" +
-	"\x05input\x18\x03 \x01(\x0e2\r.v1.InputKindR\x05input\x12&\n" +
-	"\x06output\x18\x04 \x01(\x0e2\x0e.v1.OutputKindR\x06output\"5\n" +
-	"\x0eServiceOptions\x12#\n" +
-	"\x04side\x18\x01 \x01(\x0e2\x0f.v1.ServiceSideR\x04side*\xd3\x01\n" +
+	"\x06entity\x18\x01 \x01(\tR\x06entity\x12,\n" +
+	"\x06action\x18\x02 \x01(\x0e2\x14.scrud.v1.ActionKindR\x06action\x12)\n" +
+	"\x05input\x18\x03 \x01(\x0e2\x13.scrud.v1.InputKindR\x05input\x12,\n" +
+	"\x06output\x18\x04 \x01(\x0e2\x14.scrud.v1.OutputKindR\x06output\";\n" +
+	"\x0eServiceOptions\x12)\n" +
+	"\x04side\x18\x01 \x01(\x0e2\x15.scrud.v1.ServiceSideR\x04side*\xd3\x01\n" +
 	"\n" +
 	"ActionKind\x12\x1b\n" +
 	"\x17ACTION_KIND_UNSPECIFIED\x10\x00\x12\x18\n" +
@@ -536,32 +536,32 @@ const file_scrud_v1_options_proto_rawDesc = "" +
 	"\vServiceSide\x12\x1c\n" +
 	"\x18SERVICE_SIDE_UNSPECIFIED\x10\x00\x12\x1b\n" +
 	"\x17SERVICE_SIDE_READ_WRITE\x10\x01\x12\x1a\n" +
-	"\x16SERVICE_SIDE_READ_ONLY\x10\x02:J\n" +
-	"\x06method\x12\x1e.google.protobuf.MethodOptions\x18\xca\b \x01(\v2\x11.v1.MethodOptionsR\x06method:N\n" +
-	"\aservice\x12\x1f.google.protobuf.ServiceOptions\x18\xcb\b \x01(\v2\x12.v1.ServiceOptionsR\aserviceB_\n" +
-	"\x06com.v1B\fOptionsProtoP\x01Z\x1fgithub.com/advdv/scrud/scrud/v1\xa2\x02\x03VXX\xaa\x02\x02V1\xca\x02\x02V1\xe2\x02\x0eV1\\GPBMetadata\xea\x02\x02V1"
+	"\x16SERVICE_SIDE_READ_ONLY\x10\x02:P\n" +
+	"\x06method\x12\x1e.google.protobuf.MethodOptions\x18\xca\b \x01(\v2\x17.scrud.v1.MethodOptionsR\x06method:T\n" +
+	"\aservice\x12\x1f.google.protobuf.ServiceOptions\x18\xcb\b \x01(\v2\x18.scrud.v1.ServiceOptionsR\aserviceB\x86\x01\n" +
+	"\fcom.scrud.v1B\fOptionsProtoP\x01Z'github.com/advdv/scrud/scrud/v1;scrudv1\xa2\x02\x03SXX\xaa\x02\bScrud.V1\xca\x02\bScrud\\V1\xe2\x02\x14Scrud\\V1\\GPBMetadata\xea\x02\tScrud::V1"
 
 var file_scrud_v1_options_proto_enumTypes = make([]protoimpl.EnumInfo, 4)
 var file_scrud_v1_options_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_scrud_v1_options_proto_goTypes = []any{
-	(ActionKind)(0),                     // 0: v1.ActionKind
-	(InputKind)(0),                      // 1: v1.InputKind
-	(OutputKind)(0),                     // 2: v1.OutputKind
-	(ServiceSide)(0),                    // 3: v1.ServiceSide
-	(*MethodOptions)(nil),               // 4: v1.MethodOptions
-	(*ServiceOptions)(nil),              // 5: v1.ServiceOptions
+	(ActionKind)(0),                     // 0: scrud.v1.ActionKind
+	(InputKind)(0),                      // 1: scrud.v1.InputKind
+	(OutputKind)(0),                     // 2: scrud.v1.OutputKind
+	(ServiceSide)(0),                    // 3: scrud.v1.ServiceSide
+	(*MethodOptions)(nil),               // 4: scrud.v1.MethodOptions
+	(*ServiceOptions)(nil),              // 5: scrud.v1.ServiceOptions
 	(*descriptorpb.MethodOptions)(nil),  // 6: google.protobuf.MethodOptions
 	(*descriptorpb.ServiceOptions)(nil), // 7: google.protobuf.ServiceOptions
 }
 var file_scrud_v1_options_proto_depIdxs = []int32{
-	0, // 0: v1.MethodOptions.action:type_name -> v1.ActionKind
-	1, // 1: v1.MethodOptions.input:type_name -> v1.InputKind
-	2, // 2: v1.MethodOptions.output:type_name -> v1.OutputKind
-	3, // 3: v1.ServiceOptions.side:type_name -> v1.ServiceSide
-	6, // 4: v1.method:extendee -> google.protobuf.MethodOptions
-	7, // 5: v1.service:extendee -> google.protobuf.ServiceOptions
-	4, // 6: v1.method:type_name -> v1.MethodOptions
-	5, // 7: v1.service:type_name -> v1.ServiceOptions
+	0, // 0: scrud.v1.MethodOptions.action:type_name -> scrud.v1.ActionKind
+	1, // 1: scrud.v1.MethodOptions.input:type_name -> scrud.v1.InputKind
+	2, // 2: scrud.v1.MethodOptions.output:type_name -> scrud.v1.OutputKind
+	3, // 3: scrud.v1.ServiceOptions.side:type_name -> scrud.v1.ServiceSide
+	6, // 4: scrud.v1.method:extendee -> google.protobuf.MethodOptions
+	7, // 5: scrud.v1.service:extendee -> google.protobuf.ServiceOptions
+	4, // 6: scrud.v1.method:type_name -> scrud.v1.MethodOptions
+	5, // 7: scrud.v1.service:type_name -> scrud.v1.ServiceOptions
 	8, // [8:8] is the sub-list for method output_type
 	8, // [8:8] is the sub-list for method input_type
 	6, // [6:8] is the sub-list for extension type_name

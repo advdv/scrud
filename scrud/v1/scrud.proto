@@ -1,5 +1,5 @@
 edition = "2023";
-package v1;
+package scrud.v1;
 
 import "scrud/v1/options.proto";
 

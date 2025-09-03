@@ -1,4 +1,4 @@
-package v1_test
+package scrudv1_test
 
 import (
 	"errors"

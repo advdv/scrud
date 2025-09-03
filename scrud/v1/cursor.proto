@@ -1,5 +1,5 @@
 edition = "2023";
-package v1;
+package scrud.v1;
 
 import "google/protobuf/duration.proto";
 import "google/protobuf/timestamp.proto";
